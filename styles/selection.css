@@ -1,0 +1,32 @@
+div.itemSel {
+    background-color: var(--accent);
+    cursor: pointer;
+    touch-action: manipulation;
+    border-color: var(--accent);
+    color: var(--accentText);
+}
+
+div.itemUnsel {
+    background-color: transparent;
+    cursor: pointer;
+    touch-action: manipulation;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--secondaryText);
+}
+
+div#cases_selection {
+    width: fit-content;
+}
+
+img.caseImage {
+    height: 4em;
+}
+
+div#modeButtons {
+    position: fixed;
+    bottom: 0.5em;
+    gap: 0.3em;
+    /* font-size: 1.3em; */
+    transition: all 0.3s;
+}
