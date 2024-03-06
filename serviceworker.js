@@ -71,7 +71,7 @@ var assets = [
   "https://colorjs.io/dist/color.global.js"
 ]
 
-for (var i = 1; i <= 259; i++) {
+for (var i = 1; i <= 267; i++) {
     assets.push(`/Skewb-NS2-Trainer/pic/${i}.svg`)
 }
 
