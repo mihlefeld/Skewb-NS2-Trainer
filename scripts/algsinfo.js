@@ -4,6 +4,12 @@ const selectionArrayKey = "skewbSelection";
 var preRotations = ['', 'y', 'y2', "y'", "x", "x y", "x y2", "x y'", "z'", "z' y", "z' y2", "z' y'", "z", "z y", "z y2", "z y'", "z2 y'", "z2", "x2", "z2 y"];
 
 var selCases = [];
+var selectedAlgSets = {
+    "NS2": true,
+    "EG2": true
+}
+
+var maxAlgsPerRow = 8;
 
 var algsGroups = {
     "Pi + Swirl": [1, 2, 3, 4, 5, 6, 7, 8],
@@ -39,21 +45,43 @@ var algsGroups = {
     "EG2 Peanut FR": [256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267]
 };
 
-var optionalGroups = [
-    "EG2 Ori",
-    "EG2 Pi U",
-    "EG2 Pi BR",
-    "EG2 Pi FL",
-    "EG2 Pi BL",
-    "EG2 Pi FR",
-    "EG2 Peanut U",
-    "EG2 Peanut BR",
-    "EG2 Peanut FL",
-    "EG2 Peanut BL",
-    "EG2 Peanut FR"
-];
-
-var optionalAlgsCount = 136;
+var algsets = {
+    "NS2": [
+        "Pi + Swirl",
+        "Pi + Wat",
+        "Pi + X",
+        "Pi + HU",
+        "Pi + VU",
+        "Pi + O",
+        "Pi + Z Conj",
+        "Pi + Triple Sledge",
+        "Pi + H/Z",
+        "Peanut + Swirl",
+        "Peanut + Wat",
+        "Peanut + X",
+        "Peanut + HU",
+        "Peanut + VU",
+        "Peanut + O",
+        "Peanut + Z Conj",
+        "Peanut + Triple Sledge",
+        "Peanut + H/Z/Pure",
+        "L4C",
+        "L5C"
+    ],
+    "EG2": [
+        "EG2 Ori",
+        "EG2 Pi U",
+        "EG2 Pi BR",
+        "EG2 Pi FL",
+        "EG2 Pi BL",
+        "EG2 Pi FR",
+        "EG2 Peanut U",
+        "EG2 Peanut BR",
+        "EG2 Peanut FL",
+        "EG2 Peanut BL",
+        "EG2 Peanut FR"
+    ]
+}
 
 var algsInfo = {
     "1": {

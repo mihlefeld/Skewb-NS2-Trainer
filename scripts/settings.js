@@ -20,12 +20,13 @@ var defaultSettings = {
     'scrambleSize': 2,
     'weightedChoice': true,
     'colors': {},
-    'showDots': false
+    'selectedAlgSets': {}
 };
 
 var currentSettings = {};
 Object.assign(currentSettings, defaultSettings);
 Object.assign(currentSettings['colors'], defaultColors[getColorScheme()]);
+Object.assign(currentSettings['selectedAlgSets'], selectedAlgSets)
 
 
 function loadSettings() {
@@ -112,7 +113,6 @@ function applySettings() {
     document.getElementById('scramble').style.fontSize = currentSettings['scrambleSize'] + "em";
     document.getElementById('bodyid').style.fontSize = currentSettings['baseSize'] + "em";
     document.getElementById("weighted_choice_on_off").checked = currentSettings['weightedChoice'];
-    document.getElementById("dots_toggle").checked = currentSettings['showDots'];
     computeColors();
 }
 
@@ -158,19 +158,4 @@ function toggleWeightedChoice(element) {
     currentSettings['weightedChoice'] = !currentSettings["weightedChoice"];
     element.checked = currentSettings['weightedChoice'];
     saveSettings();
-}
-
-function toggleDots(element) {
-    currentSettings['showDots'] = !currentSettings["showDots"];
-    element.checked = currentSettings['showDots'];
-    saveSettings();
-    renderSelection();
-}
-
-function decideShowDotToggle() {
-    if (window.history.state == 'select' && optionalAlgsCount != 0) {
-        document.getElementById("dots_toggle_entry").style.display = 'flex';
-    } else {
-        document.getElementById("dots_toggle_entry").style.display = 'none';
-    }
 }

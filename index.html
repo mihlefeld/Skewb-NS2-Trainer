@@ -67,7 +67,7 @@
 		<div id="casesBox" class="borderedContainer pad rowFlex center">
 			<span onclick="changeMode('select')" class="material-symbols-outlined abutton mbutton">arrow_back</span>
 			<span id='selInfo' style="font-size: 2em;"></span>
-			<span onclick="decideShowDotToggle(); openDialog('settings')"
+			<span onclick="openDialog('settings')"
 				style="padding: 0.2em; font-size: 2em; height: 1em; width: 1em;"
 				class="material-symbols-outlined abutton">
 				settings
@@ -108,7 +108,7 @@
 				<h1>NS2 Trainer</h1>
 				<div class="colFlex">
 					<div id="settingsButton">
-						<button onclick="decideShowDotToggle(); openDialog('settings')"
+						<button onclick="openDialog('settings')"
 							class="material-symbols-outlined abutton largeButton">
 							settings
 						</button>
@@ -158,14 +158,6 @@
 	</dialog>
 
 	<dialog id="settings" class='colFlex borderedContainer' onclick="dialogClick(event, this)" autofocus="">
-		<div class="settingsEntry" id="dots_toggle_entry">
-			<div>EG2</div>
-			<!-- Rounded switch -->
-			<label class="switch">
-				<input onclick="toggleDots(this);" type="checkbox" id='dots_toggle'>
-				<span class="slider round"></span>
-			</label>
-		</div>
 		<div class="settingsEntry">
 			<div>Weighted choice</div>
 			<!-- Rounded switch -->
