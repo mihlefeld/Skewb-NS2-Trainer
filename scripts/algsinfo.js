@@ -2198,7 +2198,7 @@ var algsInfo = {
         "s": "U' R U' B L' B' R'"
     },
     "228": {
-        "name": "EG2 Peanut BR + S1",
+        "name": "EG2 Peanut BR + S2",
         "a": [
             "x' r' B' r B r' R' r R r R'",
             "x z2 R' r' R r R b' R b R' b'"
@@ -2206,7 +2206,7 @@ var algsInfo = {
         "s": "R B L' R' U' R U B' R' U"
     },
     "229": {
-        "name": "EG2 Peanut BR + S2",
+        "name": "EG2 Peanut BR + S1",
         "a": [
             "y' z' r B R' B' R r R' b' B r'",
             "x z' R r R' B R B R r' R B"
